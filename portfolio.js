@@ -7,7 +7,7 @@ const caseStudy=document.querySelector(".case-study__container");
 const contact=document.querySelector(".contact__container");
 const Text=document.querySelector(".text__wrapper");
 const Text=document.querySelector(".text__wrapper");
-const preloader = document.querySelector(".preloader__container");
+// const preloader = document.querySelector(".preloader__container");
 var cursor = document.querySelector(".cursor"),
     mouseX = 0,
     mouseY = 0;
@@ -45,9 +45,9 @@ function writeText() {
 setInterval(writeText,200);
 
 
-window.addEventListener("load",() => {
-    preloader.style.display="none";
-});
+// window.addEventListener("load",() => {
+//     preloader.style.display="none";
+// });
 menuBar.addEventListener("click", () => {
     menu.classList.toggle("active");
 });
