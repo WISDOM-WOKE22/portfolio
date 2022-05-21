@@ -6,6 +6,43 @@ const aboutPage=document.querySelector(".about__container");
 const caseStudy=document.querySelector(".case-study__container");
 const contact=document.querySelector(".contact__container");
 const Text=document.querySelector(".text__wrapper");
+const Text=document.querySelector(".text__wrapper");
+const preloader = document.querySelector(".preloader__container");
+var cursor = document.querySelector(".cursor"),
+    mouseX = 0,
+    mouseY = 0;
+
+    gsap.to({}, 0.016, {
+        repeat:-1,
+    
+        onRepeat: function() {
+            gsap.set(cursor, {
+                css: {
+                    left:mouseX,
+                    top:mouseY
+                }
+            })
+        }
+    });
+    
+    window.addEventListener("mouseover", function (e) {
+         mouseX = e.clientX;
+         mouseY = e.clientY;
+         cursorColor();
+    })
+
+const nM=document.querySelector(".name");
+const write ="WISDOM";
+var indx = 0;
+
+function writeText() {
+    nM.innerHTML= write.slice(0,indx);
+    indx++;
+    if(indx > write.length){
+        indx=0;
+    }
+};
+setInterval(writeText,200);
 
 
 
