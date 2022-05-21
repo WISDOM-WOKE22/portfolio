@@ -45,7 +45,9 @@ function writeText() {
 setInterval(writeText,200);
 
 
-
+window.addEventListener("load",() => {
+    preloader.style.display="none";
+});
 menuBar.addEventListener("click", () => {
     menu.classList.toggle("active");
 });
