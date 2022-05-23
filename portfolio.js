@@ -9,28 +9,30 @@ const Text=document.querySelector(".text__wrapper");
 const Text=document.querySelector(".text__wrapper");
 // const preloader = document.querySelector(".preloader__container");
 var cursor = document.querySelector(".cursor"),
-    mouseX = 0,
-    mouseY = 0;
-
-    gsap.to({}, 0.016, {
-        repeat:-1,
-    
-        onRepeat: function() {
-            gsap.set(cursor, {
-                css: {
-                    left:mouseX,
-                    top:mouseY
-                }
-            })
-        }
-    });
-    
-    window.addEventListener("mouseover", function (e) {
-         mouseX = e.clientX;
-         mouseY = e.clientY;
-         cursorColor();
-    })
-
+// Mouse follow circle animation
+   gsap.set(".cursor", {xPercent: -50, yPercent: -50});
+  
+   const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+   const mouse = { x: pos.x, y: pos.y };
+   const speed = 0.1;
+   
+   const xSet = gsap.quickSetter(cursor, "x", "px");
+   const ySet = gsap.quickSetter(cursor, "y", "px");
+   
+   window.addEventListener("mousemove", e => {    
+     mouse.x = e.x;
+     mouse.y = e.y;  
+   });
+   
+   gsap.ticker.add(() => {
+     // adjust speed for higher refresh monitors
+     const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio()); 
+     
+     pos.x += (mouse.x - pos.x) * dt;
+     pos.y += (mouse.y - pos.y) * dt;
+     xSet(pos.x);
+     ySet(pos.y);
+   });
 const nM=document.querySelector(".name");
 const write ="WISDOM";
 var indx = 0;
