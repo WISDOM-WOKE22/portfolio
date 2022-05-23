@@ -34,7 +34,7 @@ var cursor = document.querySelector(".cursor");
      xSet(pos.x);
      ySet(pos.y);
    });
-const nM=document.querySelector(".name");
+const nM=document.querySelector(".loader");
 const write ="WISDOM";
 var indx = 0;
 
