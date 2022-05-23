@@ -10,7 +10,7 @@ const Text=document.querySelector(".text__wrapper");
 // const preloader = document.querySelector(".preloader__container");
 var cursor = document.querySelector(".cursor"),
 // Mouse follow circle animation
-   gsap.set(".cursor", {xPercent: -50, yPercent: -50});
+   gsap.set("cursor", {xPercent: -50, yPercent: -50});
   
    const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
    const mouse = { x: pos.x, y: pos.y };
