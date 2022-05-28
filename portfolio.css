@@ -32,7 +32,7 @@ body{
     position: fixed;
     transform: scale(.5);
 }
-.name{
+.loader{
     color: #32a5e8;
     font-family: sansita;
     font-size: 0.9rem;
