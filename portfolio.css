@@ -618,7 +618,7 @@ input{
     z-index: 10000;
     transition: all .1s ease;
 }
-@media screen and (max-width){
+@media screen and (max-width:900px){
     .cursor{
         display:none;
     }
