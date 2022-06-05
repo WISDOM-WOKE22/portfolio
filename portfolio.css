@@ -618,6 +618,11 @@ input{
     z-index: 10000;
     transition: all .1s ease;
 }
+@media screen and (max-width){
+    .cursor{
+        display:none;
+    }
+}
 footer{
     text-align: center;
     background-color: #0a192f;
