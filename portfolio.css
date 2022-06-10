@@ -41,7 +41,7 @@ body{
     height: 60px;
     position: fixed;
     z-index: 100;
-    background-color: #fff;
+    background-color: rgb(255,255,255,.8);
  }
 .header__container{
     z-index: 100;
@@ -54,7 +54,8 @@ body{
     border-bottom: 1px solid #1158aa;
     width: 100%;
     justify-content: center;
-    background-color: #fff;
+    background-color: rgb(255,255,255,.8);
+
 }
 .header__wrapper{
     z-index: 100;
